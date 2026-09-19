@@ -10,5 +10,6 @@ class SplashView extends StatelessWidget {
     return Scaffold(
       body: SplashViewBody(),
     );
+    
   }
 }
