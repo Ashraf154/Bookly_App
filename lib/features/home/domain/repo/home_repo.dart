@@ -4,6 +4,6 @@ import 'package:dartz/dartz.dart';
 // function with no implementation
 abstract class HomeRepo {
   Future<Either<Failure,List<BookEntity>>> fetchFeaturedBooks();
-  Future<List<BookEntity>> fetchNewestBooks();
+  Future<Either<Failure,List<BookEntity>>> fetchNewestBooks();
 
 }
