@@ -1,3 +1,4 @@
+import 'package:bookly/core/routing/router_generator.dart';
 import 'package:bookly/core/utils/constants.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -13,13 +14,15 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: RouterGenerator.mainRoutingInOurApp,
+
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor:Constants.kPrimaryColor,
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
       
-      home: SplashView(),
+    
     );
   }
 }
