@@ -1,4 +1,5 @@
 import 'package:bookly/core/routing/app_routes.dart';
+import 'package:bookly/features/home/presentation/view/book_detail_view.dart';
 import 'package:bookly/features/home/presentation/view/home_view.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
@@ -17,6 +18,12 @@ class RouterGenerator {
       path: AppRoutes.homeView,
     name: AppRoutes.homeView,
     builder: (context, state) => HomeView(),
+    ),
+
+    GoRoute(
+      path: AppRoutes.bookDetailView,
+    name: AppRoutes.bookDetailView,
+    builder: (context, state) => BookDetailView(),
     ),
     ]
     
