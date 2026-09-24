@@ -9,8 +9,10 @@ import 'package:hive_flutter/adapters.dart';
 
 void main() {
   runApp(const BooklyApp());
+  Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
   Hive.openBox(Constants.kFeaturedBox);
+    Hive.openBox(Constants.kNewestBox);
 }
 
 class BooklyApp extends StatelessWidget {
