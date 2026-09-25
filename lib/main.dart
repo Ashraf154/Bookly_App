@@ -48,7 +48,7 @@ class BooklyApp extends StatelessWidget {
                 // get it step 3
                getIt.get<HomeRepoImpl>(),
               ),
-            );
+            )..fetchFeaturedBooks();
           },
         ),
           BlocProvider(
