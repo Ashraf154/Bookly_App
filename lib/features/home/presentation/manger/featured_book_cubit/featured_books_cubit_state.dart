@@ -1,19 +1,19 @@
 part of 'featured_books_cubit_cubit.dart';
 
-sealed class FeaturedBooksCubitState {}
+sealed class FeaturedBooksState {}
 
-class FeaturedBooksCubitInitial extends FeaturedBooksCubitState {}
+class FeaturedBooksInitial extends FeaturedBooksState {}
 
-class FeaturedBooksCubitLoading extends FeaturedBooksCubitState {}
+class FeaturedBooksLoading extends FeaturedBooksState {}
 
-class FeaturedBooksCubitFailure extends FeaturedBooksCubitState {
+class FeaturedBooksFailure extends FeaturedBooksState {
   final String errMessage;
 
-  FeaturedBooksCubitFailure(this.errMessage);
+  FeaturedBooksFailure(this.errMessage);
 }
 
-class FeaturedBooksCubitSuccess extends FeaturedBooksCubitState {
- final List<BookEntity> books;
+class FeaturedBooksSuccess extends FeaturedBooksState {
+  final List<BookEntity> books;
 
-  FeaturedBooksCubitSuccess(this.books);
+  FeaturedBooksSuccess(this.books);
 }
